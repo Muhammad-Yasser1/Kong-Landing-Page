@@ -1,0 +1,81 @@
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 11;
+    @media screen and (max-width: 992px) {
+        overflow-x: hidden;
+        background: rgba(0, 0, 0, 0.65);
+    }
+    .navbar-brand {
+        &,
+        &:hover,
+        &:focus {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: 700;
+            font-size: 60px;
+            padding: 0;
+            color: white;
+        }
+        img {
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+    }
+    .navbar-toggler {
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        justify-content: flex-end;
+        .nav-item {
+            padding: 0;
+            transform: skewX(-25deg);
+            margin-left: 15px;
+            transition: 0.2s all;
+            &:hover {
+                @media screen and (min-width: 992px) {
+                    background: #00c6ff;
+                }
+            }
+            .nav-link {
+                transform: skewX(25deg);
+                padding: 8px 13px;
+                color: white;
+            }
+            &.dropdown .dropdown-toggle {
+            }
+            &.dropdown .dropdown-toggle::after {
+                top: 2px;
+                position: relative;
+            }
+            .dropdown-menu {
+                transform: skewX(25deg);
+                left: 40px;
+                margin: 0;
+                @media screen and (max-width: 992px) {
+                    background: rgba(0, 0, 0, 0.9);
+                }
+                background: rgba(0, 0, 0, 0.8);
+                min-width: 185px;
+            }
+            .dropdown-item {
+                color: white;
+                font-weight: 500;
+                transition: 0.2s all;
+                padding: 8px 10px;
+                font-size: 15px;
+            }
+            .dropdown-item:hover {
+                background: #00c6ff;
+                padding-left: 15px;
+            }
+        }
+    }
+}

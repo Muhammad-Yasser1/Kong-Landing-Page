@@ -1,0 +1,16 @@
+.copyright {
+    background: #0f0f0f;
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    a {
+        color: #fff;
+        &:hover {
+            color: #00c6ff;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@mixin overlay($opacity) {
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        left: 0;
+        background: rgba(0, 0, 0, $opacity);
+    }
+}

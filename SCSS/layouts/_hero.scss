@@ -1,0 +1,103 @@
+.hero {
+    position: relative;
+    height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        border: solid;
+        border-width: 0 200px 200px 0;
+        border-color: transparent transparent #0f0f0f transparent;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        border: solid;
+        border-width: 0 0 200px 200px;
+        border-color: transparent transparent #0f0f0f transparent;
+    }
+    .carousel {
+        .carousel-indicators {
+            bottom: 30px;
+            @media screen and (max-width: 570px) {
+                bottom: 80px;
+            }
+            li {
+            }
+        }
+        .carousel-caption {
+            top: 50%;
+            bottom: initial;
+            transform: translateY(-50%);
+            div,
+            h1 {
+                display: inline-block;
+                transform: skewX(-30deg);
+                border: 1px solid #fff;
+                padding: 7px 50px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 0.5px;
+                @media screen and (max-width: 992px) {
+                    padding: 7px 25px;
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 437px) {
+                    font-size: 15px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 13px;
+                }
+            }
+            img {
+                margin-top: -4px;
+            }
+            div:nth-child(2) {
+                @media screen and (max-width: 720px) {
+                    display: none;
+                }
+                display: block;
+            }
+            div:last-of-type {
+                @media screen and (max-width: 660px) {
+                    display: none;
+                }
+            }
+            div span,
+            h1 span {
+                display: inline-block;
+                transform: skewX(30deg);
+            }
+            button {
+                font-weight: 500;
+                color: #fff;
+                border: 1px solid transparent;
+                background: #00c6ff;
+                margin-top: 25px;
+                padding: 6px 20px;
+                transition: all 0.2s ease-in-out;
+            }
+            button:hover {
+                border-color: white;
+                background: transparent;
+            }
+        }
+        .carousel-inner {
+            .carousel-item {
+            }
+            .carousel-item img {
+                height: 100vh;
+                width: 100%;
+            }
+        }
+    }
+    @include overlay(0.5);
+}

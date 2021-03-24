@@ -1,0 +1,14 @@
+h2 {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 20px;
+    font-size: $section-title-lg-font-size;
+    margin: 0 auto $sections-vertical-inner-margin;
+    @media screen and (max-width: 430px) {
+        font-size: $section-title-sm-font-size;
+    }
+    @media screen and (max-width: 325px) {
+        font-size: $section-title-xs-font-size;
+    }
+}

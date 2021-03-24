@@ -1,0 +1,18 @@
+.btn-container {
+    margin-top: $sections-vertical-inner-margin;
+    @media screen and (max-width: 992px) {
+        margin-top: 40px;
+    }
+    button {
+        font-weight: 500;
+        color: #fff;
+        background: transparent;
+        border: 1px solid white;
+        padding: 8px 25px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            border: 1px solid transparent;
+            background: #00c6ff;
+        }
+    }
+}

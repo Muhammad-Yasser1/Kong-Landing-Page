@@ -1,0 +1,118 @@
+.programs {
+    background-image: url(../images/par.jpg);
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    color: white;
+    @include overlay(0.8);
+    .container {
+        z-index: 2;
+        position: relative;
+    }
+    &__item {
+        @media screen and (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+        .card {
+            background: transparent;
+            border: none;
+        }
+        .card .card-body {
+            border: 0;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            transition: 0.3s all;
+        }
+        &:hover .card .card-body {
+            background: #000;
+            transform: scale(1.1);
+            backface-visibility: hidden;
+        }
+        .card .card-body .card-title {
+            letter-spacing: 1px;
+            font-size: 40px;
+            display: inline-block;
+            margin: auto;
+        }
+        .card .card-body .icon {
+            width: 60px;
+            height: 60px;
+            padding-top: 6px;
+            display: inline-block;
+            background: #444;
+            transform: rotateZ(45deg);
+            margin: 10px auto 20px;
+            transition: all 0.3s;
+        }
+        &:hover .card .card-body .icon {
+            background: #00c6ff;
+        }
+        .card .card-body .icon span {
+            display: inline-block;
+            transform: rotateZ(-45deg);
+        }
+        .card .card-body .icon span img {
+            margin-left: -15px;
+            margin-bottom: -13px;
+            width: 35px;
+        }
+        .card .card-body .price {
+            font-size: 20px;
+            color: #00c6ff;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .card .card-body .price span {
+            font-size: 60px;
+            display: inline-block;
+        }
+        .card .card-body .price span sup {
+            font-size: 20px;
+        }
+        .card .card-text {
+            font-size: 16px;
+            text-align: left;
+            padding: 0;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .card .card-text li {
+            padding-top: 10px;
+        }
+        &:hover .card .card-text li {
+            padding-top: 10px;
+        }
+        .card .card-text li img {
+            width: 23px;
+            margin-top: -2px;
+        }
+        .card li img.not-included {
+            opacity: 0.3;
+        }
+        .card li span {
+            transition: 0.3s all;
+        }
+        &:hover .card li img:not(.not-included) + span {
+            color: #00c6ff;
+        }
+        .card .card-link {
+            display: inline-block;
+            padding: 8px 25px;
+            font-weight: 500;
+            color: #fff;
+            margin: 20px auto;
+            border: 1px solid #fff;
+            background: transparent;
+            transition: all 0.3s;
+        }
+        .card:hover .card-link {
+            background: #00c6ff;
+            border-color: transparent;
+        }
+    }
+}

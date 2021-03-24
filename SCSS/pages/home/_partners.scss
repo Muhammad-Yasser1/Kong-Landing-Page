@@ -1,0 +1,15 @@
+.partners {
+    background: #0f0f0f;
+    .partner {
+        @media screen and (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+        text-align: center;
+        &:hover a img {
+            transform: scale(1.3);
+        }
+        a img {
+            transition: all 0.3s;
+        }
+    }
+}

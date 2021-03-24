@@ -1,0 +1,49 @@
+section.specialties {
+    background: #0f0f0f;
+    .spec {
+        @media screen and (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+        &:hover .spec__icon-container span {
+            transform: rotate(45deg);
+            transform-origin: center;
+            background: #00c6ff;
+        }
+        &:hover .spec__title-container h4 {
+            color: #00c6ff;
+        }
+        &__icon-container {
+            position: relative;
+            span {
+                z-index: 1;
+                background: #000;
+                display: inline-block;
+                padding-top: 5px;
+                width: 60px;
+                height: 60px;
+                transition: all 0.3s;
+            }
+        }
+        &__icon-container img {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+            height: 42px;
+        }
+        &__title-container {
+            color: #fff;
+            h4 {
+                margin: 15px auto;
+                letter-spacing: 1px;
+                transition: 0.3s all;
+            }
+        }
+        &__text {
+            color: #868e96;
+            p {
+            }
+        }
+    }
+}
